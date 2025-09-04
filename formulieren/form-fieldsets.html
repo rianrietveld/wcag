@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Form fieldsets  | WCAG in de praktijk</title>
+		<meta name="robots" content="noindex, nofollow">
+		<link href="https://fonts.googleapis.com/css?family=Arvo%7CIBM+Plex+Sans&amp;display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../assets/css/stylesheet.css" type="text/css" media="all">
+	</head>
+
+	<body>
+
+	<header>
+		<p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+	</header>
+
+	<main>
+
+		<h1>Form fieldsets</h1>
+
+		<form>
+
+			<div class="block">
+				<fieldset>
+				    <legend>Hoeveel koekjes?</legend>
+				    <label for="unique-id-for-amount1">Aantal</label>
+				    <select name="amount" id="unique-id-for-amount1">
+				        <option value="one">Een</option>
+				        <option value="two">Twee</option>
+				        <option value="three">Drie</option>
+				    </select>
+				</fieldset>
+			</div>
+
+			<div class="block">
+				<fieldset>
+				    <legend>Kies een maat T-shirt</legend>
+				    <input id="size-s" name="size" type="radio" value="small" />
+				    <label for="size-s">Small</label>
+				    <input id="size-m" name="size" type="radio" value="medium" />
+				    <label for="size-m">Medium</label>
+				    <input id="size-l" name="size" type="radio" value="large" />
+				    <label for="size-l">Large</label>
+				</fieldset>
+			</div>
+
+			<div class="block">
+				<fieldset>
+					<legend>Bezorgadres</legend>
+		            <div>
+						<label for="shipping-street" class="new-line">Straat en huisnummer</label>
+						<input type="text" name="shipping-street" id="shipping-street" autocomplete="address-line1">
+					</div>
+		            <div>
+						<label for="shipping-postal-code" class="new-line">Postcode</label>
+						<input type="text" name="shipping-postal-code" id="shipping-postal-code" autocomplete="postal-code"></div>
+		            <div>
+						<label for="shipping-city" class="new-line">Plaats</label>
+						<input type="text" name="shipping-city" id="shipping-city" autocomplete="address-level2">
+					</div>
+				</fieldset>
+			</div>
+
+			<div class="block">
+				<fieldset>
+					<legend>Factuuradres</legend>
+					<div>
+						<label for="billing-street" class="new-line">Straat en huisnummer</label>
+						<input type="text" name="shipping-street" id="billing-street" autocomplete="address-line1">
+					</div>
+					<div>
+						<label for="billing-postal-code" class="new-line">Postcode</label>
+						<input type="text" name="billing-postal-code" id="billing-postal-code" autocomplete="postal-code">
+					</div>
+					<div>
+						<label for="billing-city" class="new-line">Plaats</label>
+						<input type="text" name="billing-city" id="billing-city" autocomplete="address-level2">
+					</div>
+				</fieldset>
+			</div>
+
+		</form>
+
+	</main>
+
+	<footer>
+		<p>Copyright 2025 <a href="https://www.internetacademy.nl/">Internet Academy</a>.</p>
+		<p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+    </footer>
+
+	</body>
+
+</html>

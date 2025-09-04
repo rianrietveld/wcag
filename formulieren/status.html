@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Statusberichten | WCAG in de praktijk</title>
+		<meta name="robots" content="noindex, nofollow">
+		<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="../assets/js/status.js"></script>
+		<link rel="stylesheet" href="../assets/css/stylesheet.css" type="text/css" media="all">
+		<link rel="stylesheet" href="../assets/css/status.css" type="text/css" media="all">
+	</head>
+
+	<body class="wide">
+
+	<header>
+		<p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+	</header>
+
+		<main>
+
+			<h1>Statusberichten</h1>
+
+			<p>Zorg dat statusberichten ook worden voorgelezen als ze niet de toetsenbordfocus krijgen.</p>
+
+			<h2>Demo</h2>
+
+	        <button type="button" data-status="verstuur">Verstuur</button>
+			<button type="button" data-status="filter">Filter</button>
+
+			<div class="status-wrapper" id="status-wrapper" hidden>
+				<div id="status-update"></div>
+				<button data-status="sluit" aria-label="Sluit melding">x</button>
+			</div>
+
+		</main>
+
+		<footer>
+			<p>Copyright 2025 <a href="https://www.internetacademy.nl/">Internet Academy</a>.</p>
+			<p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+		</footer>
+
+	<div id="status-announce" role="status"></div>
+	</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Form autocomplete  | WCAG in de praktijk</title>
+		<meta name="robots" content="noindex, nofollow">
+		<link href="https://fonts.googleapis.com/css?family=Arvo%7CIBM+Plex+Sans&amp;display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../assets/css/stylesheet.css" type="text/css" media="all">
+	</head>
+
+	<body>
+
+	<header>
+		<p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+	</header>
+
+	<main>
+		<h1>Form autocomplete</h1>
+
+		<p>Voeg het attribuut autocomplete toe bij velden met <strong>persoonlijke gegevens</strong>, bijvoorbeeld: autocomplete="given-name".</p>
+		<p>Een overzicht van alle autocomplete attributen staat op <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete">MDN autocomplete</a>.</p>
+		<p>Let op, woonplaats/city is address-level2. ¯\_(ツ)_/¯</p>
+
+		<form class="form-block">
+
+			<fieldset>
+                <legend>Je naam</legend>
+                <div>
+                    <label for="first-name">Voornaam</label><br />
+                    <input type="text" name="first-name" id="first-name" autocomplete="given-name">
+                </div>
+                <div>
+	                <label for="last-name">Achternaam</label><br />
+	                <input type="text" name="last-name" id="last-name" autocomplete="family-name">
+                </div>
+            </fieldset>
+
+			<fieldset>
+				<legend>Adres</legend>
+	            <div>
+		            <label for="street">Straat en huisnummer</label><br />
+		            <input type="text" name="street" id="street" autocomplete="street-address">
+	            </div>
+	            <div>
+		            <label for="postal-code">Postcode</label><br />
+		            <input type="text" name="street" id="postal-code" autocomplete="postal-code">
+	            </div>
+	            <div>
+		            <label for="city">Woonplaats</label><br />
+		            <input type="text" name="city" id="city" autocomplete="address-level2">
+	            </div>
+			</fieldset>
+
+		</form>
+
+	</main>
+
+	<footer>
+		<p>Copyright 2025 <a href="https://www.internetacademy.nl/">Internet Academy</a>.</p>
+		<p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+    </footer>
+
+	</body>
+
+</html>

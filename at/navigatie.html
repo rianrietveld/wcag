@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oefen navigatie | WCAG in de praktijk</title>
+    <link rel="stylesheet" href="../assets/css/stylesheet.css" />
+</head>
+
+<body>
+
+<header>
+    <p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+</header>
+
+<main id="main">
+
+    <h1>Oefen navigatie</h1>
+
+    <h2>Links</h2>
+
+    <ul>
+        <li><a href="#">Link een</a></li>
+        <li><a href="#">Link twee</a></li>
+        <li><a href="#">Link drie</a></li>
+        <li><a href="#">Link vier</a></li>
+        <li><a href="#">Link vijf</a></li>
+    </ul>
+
+    <h2>Formuliervelden</h2>
+
+    <form>
+
+        <h3>Tekstinvoer</h3>
+        <label for="first">Je favoriete kleur</label>
+        <input id="first" type="text" />
+
+        <h3>Select</h3>
+        <p>Met een fieldset en een legend kun je formulierelementen groeperen.</p>
+        <p>Tip: gebruik de pijltjestoetsen om naar een optie te gaan en een tab om deze te selecteren.</p>
+        <fieldset>
+            <legend>Hoeveel koekjes wil je?</legend>
+            <label for="amount">Aantal</label>
+            <select name="amount" id="amount">
+                <option value="one">Een</option>
+                <option value="two">Twee</option>
+                <option value="three">Drie</option>
+                <option value="four">Vier</option>
+            </select>
+        </fieldset>
+
+        <h3>Radio buttons</h3>
+        <p>Tip: gebruik de pijltjestoetsen om naar een optie te gaan en een tab om deze te selecteren en verder te gaan.</p>
+        <fieldset>
+            <legend>Welke maat T-shirt heb je?</legend>
+            <input id="rb-s" checked="checked" name="size" type="radio" value="small"><label for="rb-s">Small</label>
+            <input id="rb-m" name="size" type="radio" value="medium"><label for="rb-m">Medium</label>
+            <input id="rb-l" name="size" type="radio" value="large"><label for="rb-l">Large</label>
+            <input id="rb-e" name="size" type="radio" value="extra large"><label for="rb-e">Extra large</label>
+        </fieldset>
+
+        <h3>Check boxes</h3>
+        <p>Tip: gebruik de tab om te navigeren en de spatiebalk om te selecteren.</p>
+
+        <fieldset>
+            <legend>Welke maten T-shirt wil je bestellen?</legend>
+            <input id="cb-s" checked="checked" name="size" type="checkbox" value="small">
+            <label for="cb-s">Small</label>
+            <input id="cb-m" name="size" type="checkbox" value="medium">
+            <label for="cb-m">Medium</label>
+            <input id="cb-l" name="size" type="checkbox" value="large">
+            <label for="cb-l">Large</label>
+            <input id="cb-e" name="size" type="checkbox" value="extra large">
+            <label for="cb-e">Extra large</label>
+        </fieldset>
+
+        <button>Verstuur!</button>
+
+    </form>
+
+
+    <h3>Details/ Summary</h3>
+
+    <details>
+        <summary>
+            Vertel me meer!
+        </summary>
+        <div>
+            <p>Meer meer meer... Meer meer meer... Meer meer meer... Meer meer meer...</p>
+        </div>
+    </details>
+
+</main>
+
+<footer>
+    <p>Copyright 2025 <a href="https://www.internetacademy.nl/">Internet Academy</a>.</p>
+    <p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+</footer>
+
+</body>
+
+</html>

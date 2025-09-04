@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Stylen van formulierelementen | WCAG in de praktijk</title>
+		<meta name="robots" content="noindex, nofollow">
+		<link href="https://fonts.googleapis.com/css?family=Arvo%7CIBM+Plex+Sans&amp;display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../assets/css/stylesheet.css" type="text/css" media="all">
+
+
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+		<link rel="stylesheet" href="../assets/css/stylesheet-dont-do-this.css" type="text/css" media="all">
+
+	</head>
+
+	<body>
+
+    <header>
+        <p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+    </header>
+
+	<main>
+
+        <h1>Stylen van formulierelementen</h1>
+
+        <p>Test met een toetsenbord en eventueel met een screenreader.</p>
+
+	<h2>Native HTML</h2>
+
+        <form class="form-block">
+
+            <fieldset>
+                <legend>Kies je lievelingsdier</legend>
+                <div>
+                      <input type="radio" id="radio-1" name="animal" value="cat" checked="checked">
+                      <label for="radio-1">Kat</label>
+                </div>
+                <div>
+                      <input type="radio" id="radio-2" name="animal" value="dog">
+                      <label for="radio-2">Hond</label>
+                </div>
+                <div>
+                      <input type="radio" id="radio-3" name="animal" value="unicorn">
+                      <label for="radio-3">Eenhoorn</label>
+                </div>
+            </fieldset>
+
+        </form>
+
+
+	<h2>Bad practice: verberg de input met display: none</h2>
+
+		<form class="form-block styling dont-do-this">
+
+			<fieldset>
+                <legend>Kies je lievelingsdier</legend>
+                <div>
+                      <input type="radio" id="radio-4" name="animal" value="cat" checked="checked">
+                      <label for="radio-4">Kat</label>
+                </div>
+                <div>
+                      <input type="radio" id="radio-5" name="animal" value="dog">
+                      <label for="radio-5">Hond</label>
+                </div>
+                <div>
+                      <input type="radio" id="radio-6" name="animal" value="unicorn">
+                      <label for="radio-6">Eenhoorn</label>
+                </div>
+            </fieldset>
+
+        </form>
+
+		<h2>Good practice</h2>
+
+        <form class="form-block styling do-this">
+			<fieldset>
+                <legend>Kies je lievelingsdier</legend>
+                <div class="do-this-radio">
+                      <input type="radio" id="radio-7" name="animal" value="cat"  checked="checked">
+                      <label for="radio-7" >Kat</label>
+                </div>
+                <div class="do-this-radio">
+                      <input type="radio" id="radio-8" name="animal" value="dog">
+                      <label for="radio-8" >Hond</label>
+                </div>
+                <div class="do-this-radio">
+                      <input type="radio" id="radio-9" name="animal" value="unicorn">
+                      <label for="radio-9">Eenhoorn</label>
+                </div>
+            </fieldset>
+
+		</form>
+
+	</main>
+
+	<footer>
+        <p>Copyright 2025 <a href="https://www.internetacademy.nl/">Internet Academy</a>.</p>
+        <p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+    </footer>
+
+	</body>
+
+</html>

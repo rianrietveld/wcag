@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Moeilijk te bedienen formulierelementen  | WCAG in de praktijk</title>
+		<meta name="robots" content="noindex, nofollow">
+		<link href="https://fonts.googleapis.com/css?family=Arvo%7CIBM+Plex+Sans&amp;display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../assets/css/stylesheet.css" type="text/css" media="all">
+	</head>
+
+	<body>
+
+	<header>
+		<p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+	</header>
+
+	<main>
+
+		<h1>Moeilijk te bedienen formulierelementen</h1>
+
+		<h2>Multiple select</h2>
+
+		<p>Selecteer met het toetsenbord alleen Opel en Mini.</p>
+
+		<form class="form-block">
+
+           <div class="block">
+                <fieldset>
+                    <legend>Kies een auto</legend>
+	                <div><label for="select-brand">Merk</label></div>
+	                <select name="brand" id="select-brand" multiple>
+		                <option value="01">Opel</option>
+		                <option value="02">Volkswagen</option>
+		                <option value="03">Volvo</option>
+		                <option value="04">Peugeot</option>
+		                <option value="05">Mini</option>
+	                </select>
+	               </fieldset>
+             </div>
+
+        </form>
+
+		<p>Hoe met het dan? Engelstalige video met demo: <a href="/assets/docs/multiselect.mov">Multiselect met een toetsenbord</a>.</p>
+
+        <h3>Alternatief: checkboxes</h3>
+
+        <form class="form-block">
+
+           <div class="block">
+                <fieldset>
+                    <legend>Kies een automerk</legend>
+                        <div><input type="checkbox" value="01" id="opel"> <label for="opel">Opel</label></div>
+                        <div><input type="checkbox" value="02" id="volkswagen"> <label for="volkswagen">Volkswagen</label></div>
+                        <div><input type="checkbox" value="03" id="volvo"> <label for="volvo">Volvo</label></div>
+                        <div><input type="checkbox" value="04" id="peugeot"> <label for="peugeot">Peugeot</label></div>
+                        <div><input type="checkbox" value="05" id="mini"> <label for="mini">Mini</label></div>
+                   </fieldset>
+             </div>
+
+        </form>
+
+	</main>
+
+	<footer>
+		<p>Copyright 2025 <a href="https://www.internetacademy.nl/">Internet Academy</a>.</p>
+		<p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+    </footer>
+
+	</body>
+
+</html>

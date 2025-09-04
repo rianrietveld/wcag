@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantische opmaak  | WCAG in de praktijk</title>
+    <link rel="stylesheet" href="../assets/css/stylesheet.css" />
+</head>
+
+<body>
+
+<header>
+    <p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+</header>
+
+<main id="main">
+
+    <h1>Semantische opmaak</h1>
+
+    <p>Bekijk de elementen in de accessibility tree, kijk in de headingsmap en laat de teksten voorlezen.</p>
+
+    <p>Ik heb het nog nooit gedaan, dus ik denk dat ik het wel kan.</p>
+    <p>Er is geen plek zoals thuis, behalve op zee.</p>
+
+    <h2>Opsommingen</h2>
+
+    <h3>Hier komt ongeordende opsomming</h3>
+
+    <ul>
+        <li>Aap</li>
+        <li>Noot</li>
+        <li>Mies</li>
+        <li>Wim</li>
+        <li>Zus</li>
+    </ul>
+
+    <h3>Hier komt geordende opsomming</h3>
+
+    <ol>
+        <li>Aap</li>
+        <li>Noot</li>
+        <li>Mies</li>
+        <li>Wim</li>
+        <li>Zus</li>
+    </ol>
+
+    <h2>Formuliervelden</h2>
+
+    <form>
+
+        <h3>Tekstinvoer</h3>
+        <label for="first">Je favoriete kleur</label>
+        <input id="first" type="text" />
+
+        <h3>Check boxes</h3>
+
+        <fieldset>
+            <legend>Welke maten T-shirt wil je bestellen?</legend>
+            <input id="cb-s" checked="checked" name="size" type="checkbox" value="small">
+            <label for="cb-s">Small</label>
+            <input id="cb-m" name="size" type="checkbox" value="medium">
+            <label for="cb-m">Medium</label>
+            <input id="cb-l" name="size" type="checkbox" value="large">
+            <label for="cb-l">Large</label>
+            <input id="cb-e" name="size" type="checkbox" value="extra large">
+            <label for="cb-e">Extra large</label>
+        </fieldset>
+
+    </form>
+
+</main>
+
+<footer>
+    <p>Copyright 2025 <a href="https://www.internetacademy.nl/">Internet Academy</a>.</p>
+    <p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+</footer>
+
+</body>
+
+</html>

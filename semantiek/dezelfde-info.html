@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iedereen krijgt dezelfde informatie  | WCAG in de praktijk</title>
+    <link rel="stylesheet" href="../assets/css/stylesheet.css" />
+</head>
+
+<body>
+
+<header>
+    <p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+</header>
+
+<main id="main">
+
+    <h1>Iedereen krijgt dezelfde informatie</h1>
+
+    <h2>What You See Is What You Get</h2>
+
+    <p>Ziet tekst eruit als een kopje, opsomming, link, knop of paragraaf? Gebruik dan ook in de HTML de juiste elementen.
+        Deze elementen hebben echt betekenis.</p>
+
+    <p>Bijvoorbeeld: een kopje vertelt welke informatie eronder komt en is niet alleen om tekst groot te maken. Kopjes kun je makkelijk testen met de Headings Map addon.</p>
+
+    <p><strong>Demo</strong>: Wat is het verschil tussen de informatie in een pagina met <a href="met-semantiek.html">semantische opmaak</a> en een pagina <a href="zonder-semantiek.html">zonder semantische opmaak</a>?</p>
+
+    <p><strong>Oefening</strong>: Hoe semantisch is je eigen website, zijn de kopjes representatief voor de inhoud? Kijk ook eens bij <a href="https://www.volkskrant.nl/">volkskrant.nl</a></p>
+
+    <h3>Op welke pagina zit je?</h3>
+
+    <p>ALs je kunt zien weet je vaak meteen op welke pagina je bent, je hebt een volledig overzicht. Hoe krijgt een screenreader gebruiker deze informatie ook snel mee?</p>
+
+    <p>Screenreaders lezen de &lt;title&gt; in de &lt;head&gt; sectie van de HTML-code als eerste voor. Daarom is het belangrijk dat de titel goed de inhoud van de pagina beschrijft.</p>
+
+    <p><strong>Oefening</strong>: Controleer de title bij <a href="https://www.volkskrant.nl/">volkskrant.nl</a>, <a href="https://www.amazon.nl/">amazon.nl</a> en je eigen website.</p>
+
+    <h3>Wat dit de huidige pagina?</h3>
+
+    <p>In een menu kun je aangeven op welke pagina je nu bent. Een afwijking van kleur van de tekst of een lijntje eronder.</p>
+    <p>Voor een screenreader kun je dezelfde info doorgeven met aria-current. <a href="aria-current.html">Demo aria-current</a>.</p>
+    <p><strong>Oefening</strong>: Controleer hoe het huidige menu is aangegeven bij je eigen website en op <a href="https://www.eur.nl">Erasmus University Rotterdam</a>.</p>
+
+    <h3>Is het menu open of dicht?</h3>
+    <p>Als je een uitklapmenu hebt, dus een knop om het menu te openen kun je aan screenreaders meegeven of het menu open of dicht is. Dit kan met aria-expanded. <a href="aria-expanded.html">Demo aria-expanded</a>.</p>
+
+    <p><strong>Oefening</strong>: Controleer of aria-expanded is toegevoegd op het mobiele menu van je eigen website of <a href="https://www.gov.uk/">GOV.UK</a> of <a href="https://www.trouw.nl/">trouw.nl</a>.</p>
+
+    <h2>Dynamische content</h2>
+    <p>Verandert er tekst op de pagina, of komt er bijvoorbeeld een foutmelding of waarschuwing in beeld? Screenreaders pikken dit niet zomaar op. Je kunt dit ondervangen door de verandering te laten voorlezen.</p>
+
+    <p>Dit kan op twee manieren:</p>
+
+    <ul>
+        <li>Met het attribuut aria-live, bijvoorbeeld: aria-live="polite" of aria-live="assertive".</li>
+        <li>Met een role, bijvoorbeeld role="status" of role="alert".</li>
+    </ul>
+
+    <p><strong>Demo</strong>: <a href="aria-live.html">aria-live</a>.</p>
+
+    <h3>Statusberichten</h3>
+    <p>Dynamische statusberichten zijn meldingen die op het scherm verschijnen zonder dat de pagina opnieuw geladen wordt. Zoals, "Uw bericht is succesvol verzonden, "Je wordt over 10 seconden uitgelogd"</p>
+
+    <p>Krijgt een statusbericht niet de toetsenbordfocus? Dan moet de inhoud worden voorgelezen met bijvoorbeeld role="status" of role="alert", zodat iedereen de inhoud meekrijgt.</p>
+
+    TODO: live voorbeelden zoeken of eigen voorbeeld maken.
+
+    <h2>Wat zegt WCAG hierover?</h2>
+
+    <p>
+        <a href="https://nldesignsystem.nl/wcag/1.3.3">WCAG-succescriterium 1.3.3 Zintuiglijke eigenschappen</a>: <br />
+        Geef instructies op een inclusieve manier. De instructies kunnen begrijpen
+        moet niet afhankelijk zijn van eigenschappen die sommige gebruikers niet
+        ervaren. Het gaat hierbij om eigenschappen zoals vorm, kleur, afmeting,
+        locatie op het scherm, richting, of geluid.
+    </p>
+
+    <p><a href="https://nldesignsystem.nl/wcag/2.4.2">WCAG-succescriterium 2.4.2 Paginatitel</a>:<br />
+    Webpagina's hebben titels die het onderwerp of doel beschrijven.</p>
+
+    <p>
+        <a href="https://nldesignsystem.nl/wcag/2.4.6">WCAG-succescriterium 2.4.6 Koppen en labels</a>:<br />Koppen en labels beschrijven het onderwerp of het doel van de inhoud. Wat is de opzet van de pagina, waar gaat een tekst over, wat moet je invullen?
+    </p>
+
+    <p><a href="https://nldesignsystem.nl/wcag/4.1.3">WCAG-succescriterium 4.1.3 Statusberichten</a>:<br />
+        Je kunt updates met belangrijke informatie met de gebruiker delen via een statusbericht. Als dit bericht bij verschijnen geen toetsenbordfocus krijgt, zorg er dan voor dat gebruikers die de melding niet zien, deze informatie toch meekrijgen.
+    </p>
+
+</main>
+
+<footer>
+    <p>Copyright 2025 <a href="https://www.internetacademy.nl/">Internet Academy</a>.</p>
+    <p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+</footer>
+
+</body>
+
+</html>

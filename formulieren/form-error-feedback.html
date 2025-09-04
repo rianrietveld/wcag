@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Feedback op fouten in een formulier  | WCAG in de praktijk</title>
+		<meta name="robots" content="noindex, nofollow">
+		<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="../assets/js/form.js"></script>
+		<link rel="stylesheet" href="../assets/css/stylesheet.css" type="text/css" media="all">
+	</head>
+
+	<body class="wide">
+
+	<header>
+		<p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+	</header>
+
+		<main>
+
+			<h1>Feedback op fouten in een formulier</h1>
+
+			<div id="top-form">
+
+	                <h2>Schrijf je in voor onze nieuwsbrief</h2>
+	                <p>Vul alles in en ga akkoord met het privacybeleid.</p>
+
+	                <div id="notifications" tabindex="-1"></div>
+
+	                <form id="example-form">
+
+	                    <div class="block">
+		                    <label for="name">Naam</label><br />
+							<span class="error-message" id="nameError"></span>
+		                    <input id="name" type="text" autocomplete="name" aria-required="true" aria-describedby="nameError">
+
+	                    </div>
+
+
+
+						<div class="block">
+		                    <label for="email">E-mail</label><br />
+							<span class="error-message" id="emailError"></span>
+		                    <input id="email" type="email" autocomplete="email" aria-required="true" aria-describedby="emailError">
+						</div>
+
+						<div class="block">
+							<p class="description" id="descr-terms"><a href="#">Lees ons privacybeleid.</a></p>
+							<span class="error-message" id="termsError"></span>
+							<input id="terms" type="checkbox" aria-required="true"  aria-describedby="termsError">
+                            <label for="terms">Ik ga akkoord met het privacybeleid.</label>
+
+                        </div>
+
+	                    <button>Inschrijven</button>
+
+	                </form>
+
+	        </div>
+
+		</main>
+
+		<footer>
+			<p>Copyright 2025 <a href="https://www.internetacademy.nl/">Internet Academy</a>.</p>
+			<p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+		</footer>
+
+	</body>
+
+</html>

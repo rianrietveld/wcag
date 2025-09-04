@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>aria-expanded  | WCAG in de praktijk</title>
+		<meta name="robots" content="noindex, nofollow">
+		<link href="https://fonts.googleapis.com/css?family=Arvo%7CIBM+Plex+Sans&amp;display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="../assets/js/toggle.js"></script>
+		<link rel="stylesheet" href="../assets/css/stylesheet.css" type="text/css" media="all">
+	</head>
+
+	<body>
+
+	<header>
+		<p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+	</header>
+
+		<main>
+
+			<h1>aria-expanded</h1>
+
+			<h2>Is het menu open of dicht</h2>
+
+			<h2>Toggle een menu</h2>
+
+				<div class="block">
+					<button aria-expanded="false" class="expandable">Menu</button>
+					<div hidden class="expanded-content">
+						<ul>
+		                    <li><a href="#">X (Twitter)</a></li>
+		                    <li><a href="#">Mastodon</a></li>
+		                    <li><a href="#">Instagram</a></li>
+		                    <li><a href="#">LinkedIn</a></li>
+		                </ul>
+					</div>
+				</div>
+
+				<h2>Toggle een accordion (details/summary)</h2>
+
+				<details class="block" lang="en">
+                    <summary>
+                        West of Moon East of Sun, by J.R.R. Tolkien.
+                    </summary>
+
+                    <div>
+                        <p>Still round the corner there may wait<br />
+                        A new road or a secret gate;<br />
+                        And though I oft have passed them by,<br />
+                        A day will come at last when I<br />
+                        Shall take the hidden paths that run<br />
+                        West of the Moon, East of the Sun.</p>
+                    </div>
+                </details>
+
+			<div class="block">
+				<h2>Oefeningen</h2>
+
+				<p>Hoe is aria-expanded aangepakt op:</p>
+				<ul>
+					<li><a href="https://www.volkskrant.nl/">de Volkskrant</a></li>
+					<li><a href="https://www.gov.uk/">GOV.UK</a></li>
+				</ul>
+
+			</div>
+
+		</main>
+
+		<footer>
+			<p>Copyright 2025 <a href="https://www.internetacademy.nl/">Internet Academy</a>.</p>
+			<p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+		</footer>
+
+	</body>
+
+</html>

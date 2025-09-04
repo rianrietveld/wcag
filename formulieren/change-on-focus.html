@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Context verandering op focus, hover of input  | WCAG in de praktijk</title>
+    <link href="https://fonts.googleapis.com/css?family=Arvo%7CIBM+Plex+Sans&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/stylesheet.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../assets/css/stylesheet-html.css" type="text/css" media="all">
+    <script src="../assets/js/open-on-hover-focus.js"></script>
+</head>
+
+<body class="change-context">
+
+<header>
+    <p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+</header>
+
+<main>
+    <h1>Context verandering op focus, hover of input</h1>
+    <h2>Context verandering op focus en hover</h2>
+    <p>Een onverwacht modal popup (onfocus event).</p>
+
+    <div class="block">
+
+        <button onfocus="toggleDialog('dialog')" onmousemove="toggleDialog('dialog')">50% korting</button>
+        <dialog style="display:none;" id="dialog">
+            <h2>On Sale!!! Buy now!!!</h2>
+            <p>50% korting op alle sokken!</p>
+
+            <button onclick="toggleDialog('dialog');">Sluit</button>
+        </dialog>
+
+    </div>
+
+    <h2>Context verandering bij input</h2>
+    <p>Onverwachte verzending van een formulier.</p>
+
+    <form action="#" method="GET" class="block">
+
+        <label for="size">Kies een maat</label>
+        <select name="number" id="size">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+        </select>
+        <br/>
+        <label for="number">Kies een nummer</label>
+        <select name="number" id="number" onchange="showChoice(form);">
+            <option value="1">Een</option>
+            <option value="2">Twee</option>
+            <option value="3">Drie</option>
+            <option value="4">Vier</option>
+        </select>
+
+    </form>
+
+</main>
+
+<footer>
+    <p>Copyright 2025 <a href="https://www.internetacademy.nl/">Internet Academy</a>.</p>
+    <p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+</footer>
+
+</body>
+
+</html>

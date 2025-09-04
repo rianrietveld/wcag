@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>aria-live  | WCAG in de praktijk</title>
+		<meta name="robots" content="noindex, nofollow">
+		<link rel="stylesheet" href="../assets/css/stylesheet.css" type="text/css" media="all">
+		<link href="https://fonts.googleapis.com/css?family=Arvo%7CIBM+Plex+Sans&amp;display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="../assets/js/aria-live.js"></script>
+	</head>
+
+	<body>
+
+	<header>
+		<p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+	</header>
+
+		<main>
+
+			<h1>aria-live</h1>
+
+			<div id="top-form">
+
+	                <h2>Bestel een T-shirt</h2>
+	                <p>Sale! Alle t-shirts zijn nu &euro; 10!</p>
+
+	                <form id="example-form" class="block">
+
+						<div class="block-no-border">
+	                        <label for="size">Maat</label>
+	                        <select name="size" id="size">
+	                            <option>Small</option>
+	                            <option selected>Medium</option>
+	                            <option>Large</option>
+	                        </select>
+						</div>
+
+						<div class="block-no-border">
+							<label for="amount">Aantal</label>
+							<select name="amount" id="amount">
+								<option selected>1</option>
+								<option>2</option>
+								<option>3</option>
+							</select>
+						</div>
+
+						<p class="block-no-border" aria-live="polite" aria-atomic="true">
+                        	Totaalbedrag: <span id="total">10 €</span>
+						</p>
+
+						<button name="order">Bestel</button>
+
+	                </form>
+
+	        </div>
+
+		</main>
+
+		<footer>
+			<p>Copyright 2025 <a href="https://www.internetacademy.nl/">Internet Academy</a>.</p>
+			<p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+		</footer>
+
+	</body>
+
+</html>

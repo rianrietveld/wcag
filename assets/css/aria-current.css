@@ -1,0 +1,43 @@
+
+[aria-current]:not([aria-current="false"]) {
+    font-weight: 700;
+}
+
+td[aria-current]:not([aria-current="false"]) {
+    font-weight: 700;
+    border: 5px solid #333;
+}
+
+td.selected {
+    color: #eeeeee;
+    background-color: #333333;
+}
+
+td, th {
+    min-width: 5em;
+    padding: 1em;
+    text-align: center;
+}
+
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+    display: inline-block;
+    margin: 0 .5em;
+    content: "|";
+}
+
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.steps li {
+    padding: 0 4em 0 0;
+}

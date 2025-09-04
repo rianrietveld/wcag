@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Descriptions in formulieren  | WCAG in de praktijk</title>
+		<meta name="robots" content="noindex, nofollow">
+		<link href="https://fonts.googleapis.com/css?family=Arvo%7CIBM+Plex+Sans&amp;display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../assets/css/stylesheet.css" type="text/css" media="all">
+	</head>
+
+	<body>
+
+	<header>
+		<p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+	</header>
+
+		<main>
+
+			<h1>Descriptions in formulieren</h1>
+
+	        <h2>Aria-describedby</h2>
+	        <p>Is een aanvulling op de labeltekst en is handig om extra mee informatie toe te voegen.</p>
+	        <form class="block">
+	            <label for="new-password">Nieuw wachtwoord</label><br />
+				<p id="new-password-description" class="description">Gebruik een wachtwoord van minimaal 8 tekens.</p>
+	            <input type="password" id="new-password" aria-describedby="new-password-description" autocomplete="new-password">
+
+	        </form>
+
+			<form class="block">
+				<label for="new-password2">Nieuw wachtwoord (verplicht)</label><br />
+				<p id="new-password-description2" class="description">Gebruik een wachtwoord van minimaal 8 tekens.</p>
+				<p id="new-password-error2" class="description">Vul alstublieft een wachtwoord in.</p>
+				<input type="password" id="new-password2" aria-describedby="new-password-description2 new-password-error2" aria-required="true" aria-invalid="true" autocomplete="new-password">
+			</form>
+
+		</main>
+
+		<footer>
+			<p>Copyright 2025 <a href="https://www.internetacademy.nl/">Internet Academy</a>.</p>
+			<p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+		</footer>
+
+	</body>
+
+</html>

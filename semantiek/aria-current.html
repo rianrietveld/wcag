@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+
+<head>
+    <meta charset="UTF-8">
+    <title>aria-current  | WCAG in de praktijk</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link href="https://fonts.googleapis.com/css?family=Arvo%7CIBM+Plex+Sans&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/stylesheet.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../assets/css/aria-current.css" type="text/css" media="all">
+</head>
+
+<body>
+
+<header>
+    <p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+</header>
+
+<main>
+
+    <h1>aria-current</h1>
+
+    <h2>aria-current="true"</h2>
+
+    <div class="block">
+        <ul>
+            <li><a href="#" aria-current="true" class="active">Home</a></li>
+            <li><a href="#">Over ons</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <h2>aria-current="page"</h2>
+    <div class="block">
+        <ul>
+            <li><a href="#" aria-current="page" class="active">Home</a></li>
+            <li><a href="#">Over ons</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <h2>Nested menu</h2>
+    <div class="block">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/" aria-current="true" class="active">Services</a>
+                <ul>
+                    <li><a href="#" aria-current="page" class="active">Webdesign</a></li>
+                    <li><a href="#">Webdevelopment</a></li>
+                    <li><a href="#">Webcontent</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Over ons</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <h2>Breadcrumbs</h2>
+
+    <div class="block">
+        <ul class="breadcrumbs">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Afval</a></li>
+            <li aria-current="page">Afval melden</li>
+        </ul>
+
+        <ul class="breadcrumbs">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Afval</a></li>
+            <li aria-current="location">Afval melden</li>
+        </ul>
+    </div>
+
+    <h2>aria-current="step"</h2>
+
+    <div class="block">
+
+        <ol class="steps">
+            <li><a href="#">Uw gegevens</a></li>
+            <li><a href="#">Uw vraag</a></li>
+            <li aria-current="step">Controleer wat u heeft ingevuld</li>
+        </ol>
+    </div>
+
+
+    <h2>aria-current="date"</h2>
+
+    <table>
+        <caption>Kalender september</caption>
+        <tr>
+            <th scope="col">Maandag</th>
+            <th scope="col">Dinsdag</th>
+            <th scope="col">Woensdag</th>
+            <th scope="col">Donderdag</th>
+            <th scope="col">Vrijdag</th>
+            <th scope="col">Zaterdag</th>
+            <th scope="col">Zondag</th>
+        </tr>
+        <tr>
+            <td colspan="4"></td><td>1</td><td>2</td><td>3</td>
+        </tr>
+        <tr>
+            <td>4</td><td>5</td><td aria-current="date">6</td><td>7</td><td>8</td><td>9</td><td>10</td>
+        </tr>
+        <tr>
+            <td class="selected">11 <span class="screen-reader-text"> Geselecteerde datum</span></td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td>
+        </tr>
+        <tr>
+            <td>18</td><td>19</td><td>20</td><td>21</td><td>21</td><td>22</td><td>23</td>
+        </tr>
+        <tr>
+            <td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td>
+        </tr>
+        <tr>
+            <td>31</td><td colspan="6" aria-hidden="true"></td>
+        </tr>
+    </table>
+
+    <h2>aria-current="time"</h2>
+
+    <div class="block">
+
+        <p>aria-current="time" werkt niet altijd goed.</p>
+
+        <label for="coffee">Hoe laat drink je 's ochtends koffie?</label>
+        <select id="coffee">
+            <option>6 uur</option>
+            <option>7 uur</option>
+            <option>8 uur</option>
+            <option aria-current="time">9 uur</option>
+            <option>10 uur</option>
+            <option>11 uur</option>
+            <option>12 uur</option>
+            <option>Ik drink geen koffie</option>
+        </select>
+
+        <p>Hoe werkt het wel?</p>
+
+        <fieldset>
+            <legend>Hoe laat drink je 's ochtends koffie?</legend>
+            <input type="radio" id="time-6am" name="time"> <label for="time-6am">6 uur</label>
+            <input type="radio" id="time-7am" name="time"> <label for="time-7am">7 uur</label>
+            <input type="radio" id="time-8am" name="time"> <label for="time-8am">8 uur</label>
+            <input type="radio" id="time-9am" name="time"> <label for="time-9am" aria-current="time">9 uur</label>
+            <input type="radio" id="time-10am" aria-current="time" name="time"> <label for="time-10am">10 uur</label>
+            <input type="radio" id="time-11am" name="time"> <label for="time-11am">11 uur</label>
+            <input type="radio" id="time-12am" name="time"> <label for="time-12am">12 uur</label>
+            <input type="radio" id="time-no-coffee" name="time"> <label for="time-no-coffee">Ik drink geen koffie</label>
+        </fieldset>
+
+    </div>
+
+    <div class="block">
+        <h2>Oefeningen</h2>
+
+        <p>Hoe is aria-current aangepakt op:</p>
+        <ul>
+            <li><a href="https://meldingen.utrecht.nl/">Een melding doen bij de gemeente Utrecht</a></li>
+            <li><a href="https://www.kadaster.nl/winkel">Kadaster Webwinkel</a></li>
+        </ul>
+
+    </div>
+
+</main>
+
+<footer>
+    <p>Copyright 2025 <a href="https://www.internetacademy.nl/">Internet Academy</a>.</p>
+    <p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+</footer>
+
+</body>
+
+</html>
