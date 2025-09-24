@@ -1,0 +1,40 @@
+span {
+    font-weight: bold;
+}
+
+.demo h2 {
+    margin-top: 10em;
+}
+
+.card {
+    border: solid 2px #940202;
+    padding: 1em;
+    margin-bottom: 1em;
+    max-width: 32em;
+}
+.card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.card ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+}
+
+.order time {
+    order: 1;
+}
+
+.order h4 {
+    order: 2;
+}
+
+.order p {
+    order: 3;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Demo betekenisvolle volgorde | WCAG in de praktijk</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link href="https://fonts.googleapis.com/css?family=Arvo%7CIBM+Plex+Sans&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/stylesheet.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../assets/css/order.css" type="text/css" media="all">
+</head>
+
+<body>
+
+<header>
+    <p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+</header>
+
+<main>
+
+    <h1>Demo betekenisvolle volgorde</h1>
+
+    <h2>Goede volgorde</h2>
+
+    <h3>Nieuwsberichten</h3>
+    <p>De metadata "categorie" staat onder het bijbehorende kopje. Visueel en in de HTML-code.</p>
+
+    <div class="card">
+
+        <h4><a href="#">Vakantieperiode breekt weer aan</a></h4>
+        <p>Categorie: Vakantie</p>
+        <p>Samenvatting van de tekst van het bericht, over de schoolvakanties.</p>
+
+    </div>
+
+    <div class="card">
+
+        <h4><a href="#">Nieuwe burgemeester</a></h4>
+        <p>Categorie: Bestuur</p>
+        <p>Samenvatting van de tekst van het bericht, over de nieuwe burgemeester.</p>
+
+    </div>
+
+    <div class="card">
+
+        <h4><a href="#">Wijziging ophalen afval</a></h4>
+        <p>Categorie: Afval</p>
+        <p>Samenvatting van de tekst van het bericht, over de wijziging ophalen afval.</p>
+
+    </div>
+
+    <h2>Foute volgorde</h2>
+    <p>De datum staat boven het bijbehorende kopje. Visueel en in de HTML-code.</p>
+
+    <h3>Agenda</h3>
+
+    <div class="card">
+
+        <time datetime="2024-11-25">25 november 2024</time>
+        <h4><a href="#">Intocht Sinterklaas</a></h4>
+        <p>Samenvatting van de tekst van het agenda-item, over de intocht van Sinterklaas.</p>
+
+    </div>
+
+    <div class="card">
+
+        <time datetime="2024-12-02">2 december 2024</time>
+        <h4><a href="#">Opening nieuwe gemeentehuis</a></h4>
+        <p>Samenvatting van de tekst van het agenda-item, over de opening van het nieuwe gemeentehuis.</p>
+
+    </div>
+
+    <div class="card">
+
+        <time datetime="2025-01-06">6 januari 2025</time>
+        <h4><a href="#">Inzameling kerstbomen</a></h4>
+        <p>Samenvatting van de tekst van het agenda-item, over de inzameling van de kerstbomen.</p>
+
+    </div>
+
+    <h2>Volgorde aangepast in de code met CSS</h2>
+
+    <p>De datum staat boven het bijbehorende kopje, maar alleen in de HTML-code.</p>
+
+    <h3>Agenda</h3>
+
+    <div class="card order">
+
+        <h4><a href="#">Intocht Sinterklaas</a></h4>
+        <time datetime="2024-11-25">25 november 2024</time>
+        <p>Samenvatting van de tekst van het agenda-item, over de intocht van Sinterklaas.</p>
+
+    </div>
+
+    <div class="card order">
+
+        <h4><a href="#">Opening nieuwe gemeentehuis</a></h4>
+        <time datetime="2024-12-02">2 december 2024</time>
+        <p>Samenvatting van de tekst van het agenda-item, over de opening van het nieuwe gemeentehuis.</p>
+
+    </div>
+
+    <div class="card order">
+
+        <h4><a href="#">Inzameling kerstbomen</a></h4>
+        <time datetime="2025-01-06">6 januari 2025</time>
+        <p>Samenvatting van de tekst van het agenda-item, over de inzameling van de kerstbomen.</p>
+
+    </div>
+
+</main>
+
+<footer>
+
+    <p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+</footer>
+
+</body>
+
+</html>
