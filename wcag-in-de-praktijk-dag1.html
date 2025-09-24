@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="nl" class="reveal-full-page"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <title>Training WCAG in de praktijk</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="wcag-in-de-praktijk-dag1_files/reset.css">
+    <link rel="stylesheet" href="wcag-in-de-praktijk-dag1_files/reveal.css">
+    <!-- <link rel="stylesheet" href="dist/theme/black.css" id="theme"> -->
+    <link rel="stylesheet" href="wcag-in-de-praktijk-dag1_files/janitatop.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="wcag-in-de-praktijk-dag1_files/monokai.css">
+  <style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style><style>:is([id*='google_ads_iframe'],[id*='taboola-'],.taboolaHeight,.taboola-placeholder,#top-ad,#credential_picker_container,#credentials-picker-container,#credential_picker_iframe,[id*='google-one-tap-iframe'],#google-one-tap-popup-container,.google-one-tap__module,.google-one-tap-modal-div,#amp_floatingAdDiv,#ez-content-blocker-container) {display:none!important;min-height:0!important;height:0!important;}</style><style>:is([id*='google_ads_iframe'],[id*='taboola-'],.taboolaHeight,.taboola-placeholder,#top-ad,#credential_picker_container,#credentials-picker-container,#credential_picker_iframe,[id*='google-one-tap-iframe'],#google-one-tap-popup-container,.google-one-tap__module,.google-one-tap-modal-div,#amp_floatingAdDiv,#ez-content-blocker-container) {display:none!important;min-height:0!important;height:0!important;}</style></head>
+
+  <body style="transition: transform 0.8s; --slide-width: 960px; --slide-height: 700px; --slide-scale: 0.40731428571428574; --viewport-width: 1321px; --viewport-height: 297px;" class="reveal-viewport">
+    <div class="reveal slide center focused has-vertical-slides has-horizontal-slides ready" role="application" data-transition-speed="default" data-background-transition="fade" style="cursor: none;">
+      <div class="slides" style="width: 960px; height: 700px; inset: 50% auto auto 50%; transform: translate(-50%, -50%) scale(0.407314);">
+
+        <!-- intro -->
+        <section style="top: 0px; display: block;" class="stack present" data-previous-indexv="0">
+          <section style="top: 183px; display: block;" class="present">
+            <h1>WCAG in de praktijk</h1>
+            <small>Dag 1</small>
+            <p>Toetsenbord en Visuele weergave</p>
+            <img class="plain logo" width="200" alt="Internet Academy" src="wcag-in-de-praktijk-dag1_files/internetacademy_logo.svg" data-lazy-loaded="">
+          </section>
+          <section class="future" aria-hidden="true" style="top: 192px; display: block;" hidden="">
+            <h2>Agenda</h2>
+            <ol class="agenda">
+              <li>Inleiding cursus</li>
+              <li>Inleiding WCAG</li>
+              <li>Criteria onder Toetsenbordbediening</li>
+              <li>Criteria onder Visuele weergave</li>
+              <li>Eindopdracht</li>
+              <li>Vragen en afronding</li>
+            </ol>
+          </section>
+        </section>
+
+        <!-- algemeen cursus -->
+        <section style="top: 0px; display: block;" class="stack future" data-previous-indexv="0">
+          <section style="top: 112.5px; display: block;" class="" aria-hidden="true">
+          <h1>Cursus WCAG in de praktijk</h1>
+            <p>Docenten</p>
+            <ul>
+              <li>Jaap van der Putte</li>
+              <li>Rian Rietveld</li>
+              <li>Janita Top</li>
+            </ul>
+            <p>Deelnemers?</p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 219.5px; display: block;" hidden="">
+            <p>4 Dagen:</p>
+            <ol>
+              <li>Toetsenbord en Visuele weergave</li>
+              <li>Semantiek en structuur</li>
+              <li>Beeld en geluid, A11Y hell</li>
+              <li>Formulieren, WCAG in jouw organisatie</li>
+            </ol>
+          </section>
+        </section>
+
+        <!-- algemeen WCAG -->
+        <section style="top: 0px; display: block;" class="stack future" data-previous-indexv="0">
+            <section style="top: 77.5px; display: block;" class="" aria-hidden="true">
+                <h1>WCAG</h1>
+                <p>Web Content Accessibility Guidelines</p>
+                <p>4 Principes:</p>
+                <ul>
+                    <li>Perceivable = Waarneembaar = Kan iedereen het lezen en waarnemen?</li>
+                    <li>Operable = Bedienbaar = Kan iedereen de website of app goed bedienen?</li>
+                    <li>Understandable = Kan iedereen de content en functionaliteit begrijpen?</li>
+                    <li>Robust = Robuust, is de code in orde?</li>
+                </ul>
+            </section>
+            <section class="future" aria-hidden="true" style="top: 123.5px; display: none;" hidden="">
+            <p>Per <em>principe</em> één of meerdere richtlijnen.<br>
+            Per <em>richtlijn</em> meerdere succescriteria.<br>
+            Een <em>succescriterium</em> legt uit hoe je kunt voldoen aan een richtlijn op een bepaald deelgebied.</p>
+
+            <p>Bijvoorbeeld:<br>
+            <em>Principe Waarneembaar</em><br>
+            <em>Richtlijn 1.2</em> Op tijd gebaseerde media<br>
+            <em>Succescriterium 1.2.2</em> Ondertitels voor doven en slechthorenden
+            </p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 176px; display: none;" hidden="">
+             <p>3 niveaus in WCAG <strong>2.2</strong></p>
+             <ul>
+                 <li>A ⇒ 31 succescriteria</li>
+                 <li>AA ⇒ 31 + 24 = 55 succescriteria</li>
+                 <li>AAA ⇒ 31 + 24 + 31 = 86 succescriteria</li>
+             </ul>
+             <p>Wettelijke eis: WCAG versie 2.1 niveau AA<br>
+               (2026: WCAG 2.2 AA)</p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>We gaan uit van 55 succescriteria voor WCAG 2.2 AA. <br>
+            Hier hoort de volgende documentatie bij:</p>
+            <ul>
+              <li>Understanding: legt een succescriterium uit</li>
+              <li>Technieken: manieren om te voldoen</li>
+              <li>Falen (failures): manieren om niet te voldoen</li>
+            </ul>
+            <p>Vandaag gaan we bezig met de principes Waarneembaar en Bedienbaar.</p>
+          </section>
+        </section>
+
+        <!-- onderdelen toetsenbord <-->
+
+        <section style="top: 0px; display: none;" class="stack future" data-previous-indexv="0">
+          <section style="top: 0px; display: none;" class="" aria-hidden="true">
+            <h1>Toetsenbordbediening</h1>
+            <p>Operable = Bedienbaar = Kan iedereen de website of app goed bedienen?</p>
+            <p>Wie kunnen geen muis gebruiken? Bijvoorbeeld:</p>
+            <ul>
+              <li>Blinden</li>
+              <li>Mensen met motorische beperkingen</li>
+              <li>Mensen met RSI</li>
+             </ul>
+            <div>
+              <img class="plain" height="250" alt="Braillelezer" src="wcag-in-de-praktijk-dag1_files/braille-smartphone.png" data-lazy-loaded="">
+              <img class="plain" height="250" alt="Jongen houdt grote losse knop vast" src="wcag-in-de-praktijk-dag1_files/switch.png" data-lazy-loaded="">
+            </div>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 105px; display: none;" hidden="">
+             <p>Muis: visueel<br>
+            Toetsenbord: lineair</p>
+             <div>
+              <img height="320" alt="bol.com homepage met layout" src="wcag-in-de-praktijk-dag1_files/bol1.png" data-lazy-loaded="">
+              <img height="320" alt="bol.com homepage alleen tekst" src="wcag-in-de-praktijk-dag1_files/bol2.png" data-lazy-loaded="">
+            </div>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 16.5px; display: none;" hidden="">
+            <p>Criteria die we gaan behandelen onder Bedienbaar:</p>
+            <ul>
+              <li>1.4.13 Content bij hover of focus</li>
+              <li>2.1.1 Toetsenbord</li>
+              <li>2.1.2 Geen toetsenbordval</li>
+              <li>2.1.4 Enkel teken sneltoetsen</li>
+              <li>2.4.1 Blokken omzeilen</li>
+              <li>2.4.3 Focus volgorde</li>
+              <li>2.4.7 Focus zichtbaar</li>
+              <li>2.4.11 Focus niet bedekt (minimum) (WCAG 2.2)</li>
+              <li>2.4.13 Focusweergave (WCAG 2.2 AAA)</li>
+              <li>2.5.1 Aanwijzergebaren</li>
+              <li>2.5.2 Aanwijzerannulering</li>
+              <li>2.5.4 Bewegingsactivering</li>
+              <li>2.5.7 Sleepbewegingen (WCAG 2.2)</li>
+            </ul>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <h2>SC 2.1.1 Toetsenbord (Niveau A)</h2>
+            <p>Zorg dat alle functionaliteit met een toetsenbord te bedienen is, bij voorkeur volgens een verwacht patroon.</p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>De basis</p>
+            <ul>
+              <li><strong>Tab</strong>: Ga vooruit van link naar link of naar bedieningselementen.</li>
+              <li><strong>Shift + Tab</strong>: Ga achteruit van link naar link of naar bedieningselementen.</li>
+              <li><strong>Enter</strong>: Activeer links, knoppen of andere interactieve elementen.</li>
+              <li><strong>Pijl</strong>: Navigeer door keuzerondjes, selecteer vakjes en scrol omhoog en omlaag op een pagina.</li>
+              <li><strong>Spatiebalk</strong>: Activeer keuzerondjes, vink vakjes en knoppen aan.</li>
+            </ul>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>Voorbeelden van focusbare elementen</p>
+            <ul>
+              <li>link</li>
+              <li>knop</li>
+              <li>tekstinvoerveld</li>
+              <li>selectielijst</li>
+              <li>keuzerondje</li>
+              <li>selectievakje</li>
+            </ul>
+            <p>Oefen zelf op deze <a href="https://rianrietveld.github.io//wcag/at/navigatie.html">pagina met elementen</a></p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>WebAIM geeft advies over veelgebruikte patronen <a href="https://webaim.org/techniques/keyboard/#testing">webaim.org/techniques/keyboard/#testing</a></p>
+            <p>Via APG kun je per pattern kijken wat het advies is, bijvoorbeeld bij een modal: <a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/">w3.org/WAI/ARIA/apg/patterns/dialog-modal</a></p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <h3>Tips</h3>
+            <ul>
+              <li>Test je pagina met de basistoetsen (zoals tab en enter).</li>
+              <li>Test het visueel, om te controleren of je echt overal bij kunt komen.</li>
+              <li>Let op submenu’s, popups, filters, cookiemeldingen.</li>
+              <li>Test het ook ingezoomd.</li>
+            </ul>
+            <p>Demo op <a href="https://www.internetacademy.nl/">internetacademy.nl</a></p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <h2>SC 2.1.2 Geen Toetsenbordval (Niveau A)</h2>
+            <p>Als de toetsenbordfocus met de toetsenbordinterface
+verplaatst kan worden naar een component van de pagina, dan kan de focus
+ ook met alleen de toetsenbordinterface weer van dat component weg
+worden bewogen.</p>
+            <p>Dit gaat bijvoorbeeld soms mis in popups waar je alleen
+weer uit kunt door met de muis buiten de popup te klikken. Zorg dat dit
+dan ook kan met bijvoorbeeld enter op een sluitknop en/of de Escape
+knop.</p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <h2>SC 1.4.13 Content bij hover of focus (Niveau AA)</h2>
+            <p>Belangrijk bij zoomsoftware waarvoor je de muis gebruikt om een deel van de pagina te vergroten. <br>
+            Als er dan onbedoeld iets over de content heen valt, moet je
+ dit kunnen sluiten zonder je muis of focus te verplaatsen.</p>
+            </section>
+            <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+              <p>SC 1.4.13: Wanneer aanvullende content zichtbaar wordt
+en daarna weer verborgen, door het gebruik van hover met de aanwijzer of
+ focus met het toetsenbord, gelden de volgende zaken (dus alle drie):</p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <ul>
+              <li>De aanvullende content kan worden gesloten zonder de
+aanwijzer hover of de toetsenbordfocus te verplaatsen, tenzij de
+aanvullende content een invoerfout communiceert of andere content niet
+verbergt of vervangt;
+              </li>
+              <li>De aanwijzer kan over de aanvullende content worden bewogen zonder dat deze verdwijnt;
+              </li>
+              <li>De aanvullende content blijft zichtbaar totdat de
+oorzaak voor de hover of focus is verwijderd, de gebruiker de content
+sluit of de informatie niet langer geldig is.
+              </li>
+            </ul>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>Bijvoorbeeld: submenu verschijnt op hover. Je moet over
+de items heen kunnen hoveren zonder dat het submenu verdwijnt. Deze
+verdwijnt pas als je het zelf actief sluit. Dit moet kunnen zonder de
+muis of focus te verplaatsen, dus bijvoorbeeld met de Escape knop.</p>
+            <p>Voorbeelden:<br>
+            Goed: <a href="https://www.tweedekamer.nl/">Submenu Tweede Kamer</a><br>
+            Fout: <a href="https://www.jumbo.com/">Submenu Jumbo</a>
+            </p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <h2>SC 2.1.4 Enkel teken sneltoetsen (niveau A)</h2>
+            <p>Sneltoets: 1 karakter (letter, leesteken, cijfer, symbool)</p>
+            <p>Wanneer een sneltoets in content wordt geïmplementeerd, geldt ten minste één van de volgende zaken:</p>
+            <ul>
+              <li>De sneltoets kan worden uitgezet;</li>
+              <li>De sneltoets kan worden aangepast;</li>
+              <li>De sneltoets is alleen actief wanneer de betreffende component de focus heeft.</li>
+            </ul>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>Voorkomen van onbedoelde activatie</p>
+            <ul>
+              <li>Letters kunnen voorkomen in commando's bij spraakbediening</li>
+              <li>Per ongeluk aanraken van een toets (bij motorische beperking)</li>
+              <li>Sneltoetsen worden al gebruikt bij screenreaders. <br>Bijv. 'H' -&gt; voorlezen volgende kopje.</li>
+            </ul>
+            </section>
+            <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>Let op de regel van actief bij focus. De focus moet dan
+echt op dat specifieke component staan, dus bijvoorbeeld een knop of
+link. Als bijvoorbeeld de focus ergens anders in een videoplayer staat,
+is dat niet voldoende. Dan moeten deze sneltoetsen worden uitgeschakeld.</p>
+            <p>Voorbeeld: <a href="https://www.nu.nl/318897/video/drones-filmen-grootste-samenkomst-van-zoetwaterschildpadden.html">video op nu.nl</a></p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <h2>SC 2.4.1 Blokken omzeilen (Niveau A)</h2>
+            <p>Er is een mechanisme beschikbaar om blokken content die op meerdere webpagina's worden herhaald te omzeilen.</p>
+            <p>Een goed mechanisme is een <strong>skiplink</strong>, maar dit is niet vereist om te voldoen. (Wel aanbevolen!) <br>
+            Direct naar content, en/of overslaan van specifieke blokken links zoals extra menu’s of filters.</p>
+            <p>Demo skiplink op <a href="https://www.internetacademy.nl/">internetacademy.nl</a></p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>Andere toegestane methoden:</p>
+            <ul>
+              <li>Een goede koppenstructuur (consistent, voor alle belangrijke secties)</li>
+              <li>Landmarks zoals 'main', 'banner', 'contentinfo'</li>
+            </ul>
+            <p>NB: Handig voor screenreadergebruikers, maar skiplinks
+zijn het handigst voor (ziende) toetsenbordgebruikers zonder
+hulpsoftware.</p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>Voorbeeld kit.nl</p>
+             <img class="plain" alt="kit.nl landmarks" width="800" src="wcag-in-de-praktijk-dag1_files/kit.png" data-lazy-loaded="">
+             <p><small>Demo rotor landmarks (VO+U)</small></p>
+             <aside class="notes">Let op: visueel ga je naar main, maar
+tab focus gaat toch eerst weer naar skiplink. Lezen (VO+A) of navigeren
+via VO-pijl vanaf hier werkt wel. (screenreader focus verandert wel,
+keyboard focus niet, dit is verwacht gedrag, kan eventueel gemanipuleerd
+ worden met focus management op bijv. main element.)</aside>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <h2>SC 2.4.3 Focus volgorde (Niveau A)</h2>
+            <p>Wanneer een toetsenbordgebruiker binnen de webpagina
+navigeert, bijvoorbeeld met de Tab-toets, moet de tabvolgorde logisch en
+ voorspelbaar zijn.</p>
+            <p>Idealiter komt de volgorde overeen met de visuele
+volgorde, zodat het ook goed te volgen is voor ziende
+toetsenbordgebruikers en de focus niet alle kanten op springt.</p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>Aandachtspunten</p>
+            <ul>
+              <li>Menu’s en submenu’s: gaat de focus er op een logische manier doorheen, kun je overal bij met het toetsenbord?</li>
+              <li>Gaat de focus niet naar onzichtbare elementen, zoals een gesloten (mobiel) menu?</li>
+              <li>Popups: gaat de focus er meteen heen na activeren, en blijft de focus ook alleen in de popup totdat je deze weer sluit?</li>
+              <li>Formulieren: gaat de focus op een logische manier door alle invoervelden?</li>
+            </ul>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <h2>SC 2.4.7 Focus zichtbaar (niveau AA)</h2>
+            <p>Zorg dat het goed zichtbaar is welk element de
+toetsenbordfocus heeft, wanneer je door de website navigeert met een
+toetsenbord of vergelijkbare bediening. Dit kan bijvoorbeeld door het
+gebruik van een focusring (outline).</p>
+            <p>Demo: otto.nl</p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>Opdracht: doorloop de homepage van hema.nl met het toetsenbord. Let op de focus zichtbaarheid en de focus volgorde.</p>
+            <p>Tip: <a href="https://pauljadam.com/bookmarklets/focus.html">Force Focus Bookmarklet</a></p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>Tabvolgorde</p>
+            <img class="plain" alt="hema.nl tab11y screenshot" width="650" src="wcag-in-de-praktijk-dag1_files/hema.png" data-lazy-loaded="">
+            <small>Tip: <a href="https://chromewebstore.google.com/detail/taba11y-tab-order-accessi/aocppmckdocdjkphmofnklcjhdidgmga?pli=1">tabA11y browser extensie</a></small>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <h2>SC 2.4.11 Focus niet bedekt (minimum) (WCAG 2.2 niveau AA)</h2>
+            <p>Zorg ervoor dat een element dat de toetsenbordfocus heeft zichtbaar is en niet volledig bedekt is door andere inhoud. </p>
+            <p>Gaat vaak fout bij inzoomen en fixed headers/footers.</p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>Opdracht: Ga naar volkskrant.nl, zoom in tot minimaal 200%. Is de focus overal nog zichtbaar?</p>
+         </section>
+         <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+           <h2>SC 2.4.13 Focusweergave (WCAG 2.2 Niveau AAA)</h2>
+           <p>Zorg dat de focusstijl voldoende zichtbaar is. <br>
+           Voldoende dikke rand (minimaal 2 px) en voldoende contrast (minimaal 3:1).</p>
+         </section>
+         <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+           <img class="plain" alt="focus in menu ING" width="550" src="wcag-in-de-praktijk-dag1_files/ing.png" data-lazy-loaded="">
+         </section>
+         <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+           <h2>SC 2.5.1 Aanwijzergebaren (Niveau A)</h2>
+           <p>Bijvoorbeeld het slepen van inhoud binnen bepaalde kaders,
+ het swipen van foto's of het vergroten van een kaart met twee vingers.</p>
+           <p>Zorg ervoor dat de gebruiker deze acties ook kan doen met
+één aanwijzer zoals een muis of een vinger zonder deze extra gebaren te
+hoeven maken.</p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            Demo muis + toetsenbord: <a href="https://salesforce-ux.github.io/dnd-a11y-patterns/#/sortA?_k=nis5np">dnd-a11y-patterns</a>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <h2>SC 2.5.7 Sleepbewegingen (WCAG 2.2 Niveau AA)</h2>
+            <p>Acties die werken met sleepbewegingen, waarbij de
+aanwijzer ingedrukt moet blijven terwijl je van de ene plek naar de
+andere plek sleept, hebben ook een manier om de handeling zonder
+sleepbeweging uit te voeren.</p>
+            <p>NB: Het gaat hier om de start en eindpunten, niet om het pad. Bij SC 2.5.1 Aanwijzergebaren gaat om het pad.</p>
+            <p></p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <h2>SC 2.5.2 Aanwijzerannulering (Niveau A)</h2>
+            <p>Zorg ervoor dat, als de gebruiker bijvoorbeeld een link
+of button indrukt met een aanwijzer zoals een muis of vinger, er de
+mogelijkheid is om actie te voorkomen of ongedaan te maken.</p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>Voorkom onbedoelde activatie door ten minste één van de volgende voorwaarden:</p>
+            <ul>
+              <li>De actie wordt niet uitgevoerd op het down-event</li>
+              <li>De actie wordt uitgevoerd op het up-event (na het loslaten) en je moet de actie kunnen afbreken of terugdraaien</li>
+              <li>Het up-event draait de actie terug van het down-event</li>
+              <li>De actie uitvoeren op het down-event is essentieel</li>
+            </ul>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>Dus: Als je per ongeluk een item hebt aangeraakt (of
+besluit het toch niet te willen activeren), moet je de vinger of muis
+kunnen verplaatsen om activatie te voorkomen. </p>
+            <p>Dit geldt ook voor complexe interacties zoals sleepbewegingen.<br>
+            Terugdraaien mag ook met een 'undo' knop.</p>
+            <p>Essentieel: bijv. keyboard emulation</p>
+          </section>
+
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <h2>SC 2.5.4. Bewegingsactivering (Niveau A)</h2>
+            <p>Als de gebruiker een actie kan uitvoeren door een
+beweging te doen met het apparaat, dan moet er ook een manier zijn om
+die actie te doen zonder beweging. Voorbeeld: schudden om te updaten.
+            </p>
+             <p>Zorg dat de functie ook kan worden uitgevoerd met een knop of link en dat de reactie op de beweging kan worden uitgezet. </p>
+          </section>
+         </section>
+
+        <section style="top: 0px; display: none;" class="stack future" data-previous-indexv="0">
+          <section style="top: 26px; display: none;" class="" aria-hidden="true">
+            <h1>Pauze</h1>
+            <img class="plain" alt="dinosuarus" width="500" src="wcag-in-de-praktijk-dag1_files/schattigedinosaurus.png" data-lazy-loaded="">
+          </section>
+        </section>
+
+        <!-- Visuele weergave -->
+
+        <section style="top: 0px; display: none;" class="stack future" data-previous-indexv="0">
+          <section style="top: 130.5px; display: none;" class="" aria-hidden="true">
+            <h1>Visuele weergave</h1>
+            <p>Perceivable = Waarneembaar = Kan iedereen het lezen en waarnemen?</p>
+            <ul>
+              <li>Blinden</li>
+              <li>Slechtzienden (in alle gradaties)</li>
+              <li>Kleurenblinden</li>
+              <li>Mensen met dyslexie</li>
+              <li>Mensen met ADHD, autisme (concentratie, focus)</li>
+            </ul>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 106.5px; display: none;" hidden="">
+            <p>Criteria die we vandaag gaan behandelen onder Waarneembaar:</p>
+            <ul>
+              <li>1.3.4 Weergavestand</li>
+              <li>1.4.3 Contrast (Minimum)</li>
+              <li>1.4.11 Contrast van niet-tekstuele content</li>
+              <li>1.4.4 Herschalen van tekst</li>
+              <li>1.4.10 Reflow</li>
+              <li>1.4.12 Tekstafstand</li>
+              <li>2.5.5 Grootte van het aanwijsgebied (minimum)</li>
+              <li>2.5.8 Grootte van het aanwijsgebied (uitgebreid)</li>
+            </ul>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 133px; display: none;" hidden="">
+            <h2>SC 1.4.3 Contrast (minimum) (Niveau AA)</h2>
+            <p>Het contrast van de tekstkleur ten opzichte van de
+achtergrondkleur moet hoog genoeg zijn, zodat de tekst in het algemeen
+goed leesbaar is.</p>
+            <ul>
+            <li>Contrastwaarde minimaal 4,5:1 voor gewone tekst</li>
+            <li>Contrastwaarde minimaal 3:1 voor grote tekst</li>
+            <li>Uitzondering: logo's (wel aangeraden)</li>
+            </ul>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>Opdracht: test het contrast op fd.nl</p>
+            <p>Tips voor tools:</p>
+            <ul>
+              <li><a href="https://www.tpgi.com/color-contrast-checker/">Colour Contrast Analyzer</a></li>
+              <li><a href="https://webaim.org/resources/contrastchecker/">WebAIM contrast checker</a></li>
+              <li>Gebruik contrast checker in (Chrome) code inspector</li>
+              <li>Gerbuik aXe test in code inspector</li>
+            </ul>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <h2>SC 1.4.11 Contrast van niet-tekstuele content (Niveau AA)</h2>
+            <p>Zorg voor voldoende kleurcontrast tussen de achtergrondkleur en de kleur van componenten die visueel betekenis hebben.</p>
+            <p>Interactieve elementen en grafische objecten</p>
+            <ul>
+              <li>Menu-icoon als knop</li>
+              <li>Status-icoon (vinkje, kruis)</li>
+              <li>Toggle knop (aan/uit)</li>
+              <li>Randen van invoervelden</li>
+              <li>Focusstijl (rand, andere kleur)</li>
+              <li>Onderdelen in een grafiek</li>
+            </ul>
+            <img alt="toggle in lichtgroen" width="200" class="plain" style="float:right;padding-top:40px;padding-right: 100px;" src="wcag-in-de-praktijk-dag1_files/toggle.png" data-lazy-loaded="">
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+             <img alt="grafiek met alleen kleur" src="wcag-in-de-praktijk-dag1_files/grafiek.png" data-lazy-loaded="">
+             <p>Opdracht: <br>Hoe toegankelijk is dit diagram? <br>Wat zou je aanpassen?</p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <h2>Weergave van tekst en layout</h2>
+            <p>Criteria die te maken hebben met responsive bouwen</p>
+            <ul>
+              <li>Herschalen van tekst</li>
+              <li>Reflow</li>
+              <li>Weergavestand</li>
+              <li>Tekstafstand</li>
+            </ul>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <h2>SC 1.4.4 Herschalen van tekst (Niveau AA)</h2>
+            <p>De gebruiker moet de tekst twee keer (200%) kunnen vergroten. Het gaat hierbij alleen om het vergroten van tekst.</p>
+            <p>Dit kan door in de browser of OS (bijv. Android) de tekstgrootte aan te passen tot 200%, of door (gehele) browser zoom.</p>
+             <img alt="tekstzoom in Firefox instellingen" height="200" src="wcag-in-de-praktijk-dag1_files/FF200.png" data-lazy-loaded="">
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <h2>SC 1.4.10 Reflow (Niveau AA)</h2>
+            <p>De gebruiker moet de webpagina tot 400% kunnen inzoomen
+zonder in 2 richtingen te hoeven scrollen. Het gaat hierbij om alle
+elementen van een webpagina.</p>
+            <ul>
+              <li>In RWD vergelijkbaar met mobiele weergave (maar dit SC is bedoeld voor grotere apparaten).</li>
+              <li>Content moet kunnen reflowen/wrappen tot 320px breed (of 256px hoog).
+              </li><li>Meest voorkomend: één verticale kolom voor verticale layouts. (Horizontale kolom bij bijv. Chinese teksten).</li>
+            </ul>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <h2>SC 1.3.4 Weergavestand (Niveau AA)</h2>
+            <p>Zorg ervoor dat een gebruiker het scherm niet fysiek hoeft te draaien om de inhoud goed te kunnen zien. <br>Je moet de content kunnen bekijken in zowel landschap-modus als in portret-modus.</p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <h2>SC 1.4.12 Tekstafstand (Niveau AA)</h2>
+            <p>Tekst kan op een aantal manieren aangepast worden door de
+ gebruiker voor betere leesbaarheid, zoals regelafstand, letterafstand
+en spatiëring.</p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>Voor al deze criteria geldt:</p>
+            <ul>
+              <li>Alle functies, zoals het menu, moeten blijven werken.</li>
+              <li>Alle tekst moet leesbaar zijn.</li>
+              <li>Er mag geen inhoud buiten beeld vallen of verborgen worden (enige uitzonderingen).</li>
+              <li>Zorg dat er niet in 2 richtingen gescrold hoeft te worden (enige uitzonderingen).</li>
+            </ul>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>Dit mag WEL:</p>
+            <ul>
+              <li>Onderdelen op een andere plek zetten.</li>
+              <li>Onderdelen inklappen.</li>
+              <li>Tekst afbreken wanneer de gehele tekst meteen beschikbaar is na focus of activatie.</li>
+              <li>Verschillende scrollrichtingen voor aparte secties
+(maar niet binnen een tekst van een onderdeel). Bijv. carousels met
+blokken van max 320px breed.</li>
+              <li>Horizontaal scrollen in (grote) tabellen of kaarten.</li>
+            </ul>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>Let op bij:</p>
+            <ul>
+              <li>Hoofdnavigatie inclusief zoekbalk (gaat vaak mis bij ver inzoomen en landschapsmodus)</li>
+              <li>Popups zoals cookiebanners en chatwindows</li>
+              <li>Tooltips</li>
+              <li>Slideshows</li>
+            </ul>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>Hoe te testen:<br>
+              Zet de schermbreedte op 1280px en zoom in tot 400%.
+            </p><p>Tip: Zet dit als vaste waarde(s) in de Web Developer Toolbar</p>
+            <img alt="settings in web developer toolbar" width="500" src="wcag-in-de-praktijk-dag1_files/reflow-wd.png" data-lazy-loaded="">
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>Ga de volgende stappen bij langs en controleer of alles beschikbaar en functioneel blijft:</p>
+            <ol>
+              <li>Zet je scherm op de ingestelde grootte</li>
+              <li>Start op 100%, zoom in stappen naar 200%</li>
+              <li>Zoom in stappen verder tot 400%</li>
+              <li>Draai het scherm (simulatie of op mobiel apparaat)</li>
+              <li>Test ook op een echt mobiel apparaat</li>
+            </ol>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>Opdracht: test volkskrant.nl op de volgende manieren:</p>
+           <ol>
+            <li>Op 200% tekstzoom</li>
+            <li>Op 200% browserzoom</li>
+            <li>Op 400% browserzoom</li>
+            <li>In landschapsmodus</li>
+          </ol>
+          <p>Test ook met het toetsenbord.</p>
+          <p>Blijft alles beschikbaar? <br>Zie je verschillen in Chrome en Firefox?</p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>Richtlijn Tekstafstand:</p>
+            <ul>
+              <li>Regelhoogte (regelafstand) naar ten minste 1,5 keer de lettergrootte</li>
+              <li>Afstand tussen alinea's naar ten minste 2 keer de lettergrootte</li>
+              <li>Letterafstand (spatiëren van letters) naar ten minste 0,12 keer de lettergrootte</li>
+              <li>Spatiëren van woorden naar ten minste 0,16 keer de lettergrootte</li>
+            </ul>
+             <p>Hiervoor kun je deze <a href="https://dylanb.github.io/bookmarklets.html">textspacing bookmarklet</a> gebruiken.</p>
+          </section>
+           <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>Opdracht: test volkskrant.nl met aangepaste tekstafstanden.</p>
+             <p>Test dit ook met inzoomen.</p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <h2>SC 2.5.8 Grootte van het aanwijsgebied (minimum) (WCAG 2.2 Niveau AA)</h2>
+            <p>Zorg ervoor dat de aanklikbare elementen zoals buttons,
+links en formuliervelden groot genoeg zijn om makkelijk aan te klikken
+met een muis of vinger. Hierbij geldt dat het aan te klikken gebied ten
+minste <em>24 bij 24 pixels</em> groot is.</p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <h2>SC 2.5.5 Grootte van het aanwijsgebied (uitgebreid) (WCAG 2.2 Niveau AAA)</h2>
+            <p>Zorg ervoor dat de aanklikbare elementen zoals buttons,
+links en formuliervelden groot genoeg zijn om makkelijk aan te klikken
+met een muis of vinger. Hierbij geldt dat het aan te klikken gebied ten
+minste <em>44 bij 44 pixels groot</em> is.</p>
+             <p>Groter = Beter</p>
+             <p>Best practice</p>
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <h3>Uitzonderingen</h3>
+            <ul>
+              <li>Het gebied is te klein, maar dankzij voldoende ruimte eromheen overlapt het niet met andere aanklikbare gebieden (zie <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">Understanding document</a>)</li>
+              <li>Er is op de pagina een alternatief voor dit element dat wel groot genoeg is.</li>
+              <li>Het aanwijsbare element, bijvoorbeeld een link, is onderdeel van een zin (inline element).</li>
+              <li>De browser bepaalt de grootte van het element en dit kan niet gewijzigd worden (bijv. default date picker).</li>
+              <li>De kleine weergave is essentieel of wettelijk verplicht (bijv. pins op een kaart).</li>
+          </ul></section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>Testen met <a href="https://cdpn.io/pen/debug/YzdwWZw">Target size bookmarklet</a></p>
+            <img alt="targetsize footer volkrant" width="600" src="wcag-in-de-praktijk-dag1_files/footervk.png" data-lazy-loaded="">
+          </section>
+          <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+            <p>Opdracht: test het aanwijsgebied op een eigen gekozen website (waar je zelf aan werkt).</p>
+          </section>
+        </section>
+
+      <!-- afsluiting -->
+
+      <section style="top: 0px; display: none;" class="stack future" data-previous-indexv="0">
+        <section style="top: 25.5px; display: none;" class="" aria-hidden="true">
+          <h1>Eindopdracht</h1>
+          <p>Ga naar Gelderland.nl, pagina Kaarten &amp; Cijfers</p>
+          <p>Beoordeel de toetsenbordtoegankelijkheid en de visuele weergave</p>
+          <p>Let op de volgende punten:</p>
+          <ol>
+            <li>Is alles bereikbaar met het toetsenbord?</li>
+            <li>Is de focusvolgorde logisch?</li>
+            <li>Kun je blokken omzeilen?</li>
+            <li>Is de focus goed zichtbaar?</li>
+            <li>Is er voldoende contrast?</li>
+            <li>Blijft alles werken bij inzoomen?</li>
+            <li>Zijn de aanwijsgebieden groot genoeg?</li>
+          </ol>
+        </section>
+        <section class="future" aria-hidden="true" style="top: 297px; display: none;" hidden="">
+          <h1>Vragen?</h1>
+        </section>
+    </section>
+
+
+    </div><!-- - - - - slides-->
+
+    <div class="backgrounds"><div class="slide-background stack present" style="display: block;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background present" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div></div><div class="slide-background stack future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background present" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div></div><div class="slide-background stack future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background present" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-background stack future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background present" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-background stack future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background present" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div></div><div class="slide-background stack future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background present" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-background stack future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background present" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div></div></div><div class="slide-number" style="display: block;"><a href="#/">
+					<span class="slide-number-a">1</span>
+					<span class="slide-number-delimiter">/</span>
+					<span class="slide-number-b">70</span>
+					</a></div><aside class="controls" style="display: block;" data-controls-layout="bottom-right" data-controls-back-arrows="faded"><button class="navigate-left" aria-label="previous slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-right enabled" aria-label="next slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-down highlight enabled" aria-label="below slide"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);" class="aria-status" aria-live="polite" aria-atomic="true">WCAG in de praktijk Dag 1 Toetsenbord en Visuele weergave </div></div><!-- - - - - reveal-->
+
+
+
+    <script src="wcag-in-de-praktijk-dag1_files/reveal.js"></script>
+    <script src="wcag-in-de-praktijk-dag1_files/zoom.js"></script>
+    <script src="wcag-in-de-praktijk-dag1_files/notes.js"></script>
+    <script src="wcag-in-de-praktijk-dag1_files/search.js"></script>
+    <script src="wcag-in-de-praktijk-dag1_files/markdown.js"></script>
+    <script src="wcag-in-de-praktijk-dag1_files/highlight.js"></script>
+    <script>
+
+      // Also available as an ES module, see:
+      // https://revealjs.com/initialization/
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+        slideNumber: 'c/t',
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+      });
+
+      // remap key bindings for presenter device arrows
+        /*Reveal.configure({
+              keyboard: {
+                39: 'next', // down instead of right
+                37: 'prev'  // up instead of left
+              }
+            });*/
+        /* H: Navigate left, L: Navigate right */
+        /* S: Speaker view, shows in seperate window */
+
+    </script>
+
+
+
+</body></html>

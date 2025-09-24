@@ -19,11 +19,27 @@
 
     <h1>Toegankelijke naam en de accessibility tree</h1>
 
-    <p>Wat je ziet moet je ook kunnen horen. Bijvoorbeeld voor een menu knop: de naam (Menu), de rol (button) en de state (open of dicht). Voor een link: de naam (Contact), de rol (link) en de waarde (https://www.internetacademy.nl/contact).</p>
+    <p>Wat je ziet moet je ook kunnen horen. Geef daarom een interactief HTML-element de juiste rol, naam en indien van toepassing een waarde of status</p>
 
-    <h2>Voorbeelden om het uit te leggen.</h2>
+    <p>Bijvoorbeeld voor een menu knop:<p>
+    <ul>
+        <li>de naam: Menu</li>
+        <li>de rol: button</li>
+        <li>de status: open of dicht (aria-expanded)</li>
+    </ul>
 
-    <p>We gaan samen met een screenreader door een aantal websites. Wat valt je op bij het voorlezen?</p>
+    <pre></pre><code>&lt;button aria-expanded="false">Menu&lt;/button></code></pre>
+
+    <p>Bijvoorbeeld voor een link:<p>
+    <ul>
+        <li>de naam: Contact</li>
+        <li>de rol: link</li>
+        <li>de waarde: https://www.internetacademy.nl/contact</li>
+    </ul>
+
+    <pre></pre><code>&lt;a href="https://www.internetacademy.nl/contact">Contact&lt;/a></code></pre>
+
+    <p><strong>Demo</strong>: We gaan samen met een screenreader door een aantal websites. Wat valt je op bij het voorlezen?</p>
 
     <ul>
         <li><a href="../at/navigatie.html">Oefenpagina navigatie</a></li>
@@ -51,7 +67,7 @@
         <li><a href="https://otto.nl">Otto</a></li>
     </ul>
 
-    <p>Optioneel: <a href="vc.html">demo Voice Control in Safari</a> voor belang toegankelijke naam</p>
+    <p><strong>Demo</strong>: <a href="vc.html">demo Voice Control in Safari</a> voor belang toegankelijke naam</p>
 
     <h2>Wat zegt WCAG hierover?</h2>
 
@@ -73,7 +89,6 @@
 </main>
 
 <footer>
-    <p>Copyright 2025 <a href="https://rianrietveld.nl/">Rian Rietveld</a>.</p>
     <p><a href="index.html">Terug naar de inhoudsopgave</a></p>
 </footer>
 
