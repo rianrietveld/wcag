@@ -1,115 +1,113 @@
 <!DOCTYPE html>
 <html lang="nl-NL">
 
-	<head>
-		<meta charset="UTF-8">
-		<title>Form labels  | WCAG in de praktijk</title>
-		<meta name="robots" content="noindex, nofollow">
-		<link href="https://fonts.googleapis.com/css?family=Arvo%7CIBM+Plex+Sans&amp;display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="../assets/css/stylesheet.css" type="text/css" media="all">
-	</head>
+<head>
+    <meta charset="UTF-8">
+    <title>Form labels | WCAG in de praktijk</title>
+    <meta content="noindex, nofollow" name="robots">
+    <link href="https://fonts.googleapis.com/css?family=Arvo%7CIBM+Plex+Sans&amp;display=swap" rel="stylesheet">
+    <link href="../assets/css/stylesheet.css" media="all" rel="stylesheet" type="text/css">
+</head>
 
-	<body>
+<body>
 
-    <header>
-        <p><a href="index.html">Terug naar de inhoudsopgave</a></p>
-    </header>
+<header>
+    <p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+</header>
 
-	<main>
+<main>
 
-        <h1>Form labels</h1>
+    <h1>Form labels</h1>
 
-		<h2>Labelling</h2>
+    <h2>Labelling</h2>
 
-		<form>
+    <form>
 
-			<div class="block">
-				<p>Geen label:</p>
-				<input type="text" name="colour">
-			</div>
+        <div class="block">
+            <p>Geen label:</p>
+            <input name="colour" type="text">
+        </div>
 
-			<div class="block">
-				<p>Alleen een placeholder:</p>
-				<input type="text" name="colour" placeholder="What's your favourite colour?">
-			</div>
+        <div class="block">
+            <p>Alleen een placeholder:</p>
+            <input name="colour" placeholder="What's your favourite colour?" type="text">
+        </div>
 
-			<div class="block">
-				<p>Eigenlijk geen label, maar gewoon tekst in een spatie naast de tekst.</p>
-				<span>Wat is je lievelingskleur?</span><br />
-				<input type="text" name="colour">
-			</div>
+        <div class="block">
+            <p>Eigenlijk geen label, maar gewoon tekst in een spatie naast de tekst.</p>
+            <span>Wat is je lievelingskleur?</span><br/>
+            <input name="colour" type="text">
+        </div>
 
-			<div class="block">
-				<p>Een label, maar niet gekoppeld aan de invoer:</p>
-                <label>Wat is je lievelingskleur?</label><br />
-                <input type="text" name="colour">
-            </div>
+        <div class="block">
+            <p>Een label, maar niet gekoppeld aan de invoer:</p>
+            <label>Wat is je lievelingskleur?</label><br/>
+            <input name="colour" type="text">
+        </div>
 
-            <div class="block">
-                <p>Juiste label/input koppeling:</p>
-                <label for="colour1">Wat is je lievelingskleur?</label><br />
-                <input type="text" id="colour1" name="colour">
-            </div>
+        <div class="block">
+            <p>Juiste label/input koppeling:</p>
+            <label for="colour1">Wat is je lievelingskleur?</label><br/>
+            <input id="colour1" name="colour" type="text">
+        </div>
 
-            <div class="block">
-                <p>Juiste label/input koppeling plus een placeholder:</p>
-                <label for="colour2">Wat is je lievelingskleur?</label><br />
-                <input type="text" id="colour2" name="colour" placeholder="Bijvoorbeeld rood">
-            </div>
+        <div class="block">
+            <p>Juiste label/input koppeling plus een placeholder:</p>
+            <label for="colour2">Wat is je lievelingskleur?</label><br/>
+            <input id="colour2" name="colour" placeholder="Bijvoorbeeld rood" type="text">
+        </div>
 
-            <h2>Alternativen</h2>
+        <h2>Alternativen</h2>
 
-            <div class="block">
-                <p>Implicit label:</p>
-     <pre>
-         <code>
-            &lt;label for="kleur">Wat is je lievelingskleur?
-                &lt;input type="text" id="kleur" name="lievelingskleur">
-            &lt;/label>
-        </code>
-     </pre>
+        <div class="block">
+            <p>Implicit label:</p>
+            <pre>
+ <code>
+    &lt;label for="kleur">Wat is je lievelingskleur?
+        &lt;input type="text" id="kleur" name="lievelingskleur">
+    &lt;/label>
+</code>
+            </pre>
 
-                <label for="colour5">Wat is je lievelingskleur?<br />
-                    <input type="text" id="colour5" name="colour">
-                </label>
-            </div>
+            <label for="colour5">Wat is je lievelingskleur?<br/>
+                <input id="colour5" name="colour" type="text">
+            </label>
+        </div>
 
-            <div class="block">
-                <p>Gebruik een aria-label (niet aanbevolen):</p>
-     <pre>
-         <code>
-             &lt;input type="text" id="size" name="size" aria-label="Size" placeholder="Size">
-     </code>
-     </pre>
+        <div class="block">
+            <p>Gebruik een aria-label (niet aanbevolen als zichtbare naam verdwijnt):</p>
+            <pre>
+ <code>
+     &lt;input type="text" id="size" name="size" aria-label="Size" placeholder="Size">
+</code>
+            </pre>
 
-                <input type="text" id="size" name="size" aria-label="Size" placeholder="Maat">
-            </div>
+            <input aria-label="Size" id="size" name="size" placeholder="Maat" type="text">
+        </div>
+
+        <h2>Houd het label simpel en to-the-point</h2>
+
+        <div class="block">
+            <p>Fout: gebruik geen link in een label</p>
+            <input id="terms1" name="terms" type="checkbox">
+            <label for="terms1">Ik ga akkoord met de <a href="#">leveringsvoorwaarden</a>.</label>
+        </div>
+
+        <div class="block">
+            <p id="terms-desc">Lees onze <a href="#">leveringsvoorwaarden (opent in een nieuw venster)</a>.</p>
+            <input aria-describedby="terms-desc" id="terms2" name="terms" type="checkbox">
+            <label for="terms2">Ik ga akkoord met de leveringsvoorwaarden.</label>
+        </div>
 
 
-			<h2>Houd het label simpel en to-the-point</h2>
+    </form>
 
-            <div class="block">
-                <p>Fout: gebruik geen link in een label</p>
-                <input type="checkbox" id="terms1" name="terms">
-                <label for="terms1">Ik ga akkoord met de <a href="#">leveringsvoorwaarden</a>.</label>
-            </div>
+</main>
 
-            <div class="block">
-                <p id="terms-desc">Lees onze <a href="#">leveringsvoorwaarden (opent in een nieuw venster)</a>.</p>
-                <input type="checkbox" id="terms2" name="terms" aria-describedby="terms-desc">
-                <label for="terms2">Ik ga akkoord met de leveringsvoorwaarden.</label>
-            </div>
+<footer>
+    <p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+</footer>
 
-
-		</form>
-
-	</main>
-
-	<footer>
-
-        <p><a href="index.html">Terug naar de inhoudsopgave</a></p>
-    </footer>
-
-	</body>
+</body>
 
 </html>
